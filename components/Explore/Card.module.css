@@ -1,0 +1,32 @@
+.container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+        background-color: var(--secondary);
+        margin: 20px;
+        height: 250px;
+        position:relative;
+        border-radius: 25px; 
+        overflow: hidden;
+        /*rounded, shadow*/
+
+}
+.h1{
+    font-size: 24px;
+    top: 15%;
+    right: 10%;
+    display: flex;
+    position: absolute;
+}
+
+.button{
+    border-radius: 15px;
+    background-color: #A8C87F;
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+
+}
+
