@@ -1,19 +1,29 @@
 html,
 body {
-    padding: 0;
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
 :root {
     --primary: #a8c87f;
     --secondary: #f0f0d1;
