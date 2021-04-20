@@ -14,7 +14,8 @@
 }
 
 .navbar__link {
-    font-size: 0.75rem;
+    font-size: 1rem;
+    color: var(--primary);
 }
 
 .navbar__link + .navbar__link {

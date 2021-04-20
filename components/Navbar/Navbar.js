@@ -6,16 +6,24 @@ function Navbar() {
         <header className={styles.wrapper}>
             <div className={styles.navbar}>
                 <a href=''>
-                    <h3>The Garden</h3>
+                    <h2>The Garden</h2>
                 </a>
-                <nav>
-                    <a className={styles.navbar__link} href=''>
-                        Explore Garden
-                    </a>
-                    <a className={styles.navbar__link} href=''>
-                        Log out
-                    </a>
-                </nav>
+                {false ? (
+                    <nav>
+                        <a className={styles.navbar__link} href=''>
+                            Explore Garden
+                        </a>
+                        <a className={styles.navbar__link} href=''>
+                            Log out
+                        </a>
+                    </nav>
+                ) : (
+                    <nav>
+                        <a className={styles.navbar__link} href=''>
+                            Log In
+                        </a>
+                    </nav>
+                )}
             </div>
         </header>
     );
