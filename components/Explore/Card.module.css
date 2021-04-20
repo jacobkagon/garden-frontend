@@ -1,0 +1,36 @@
+.container {
+    min-height: 30vh;
+    width: 55%;
+    margin: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary);
+    position: relative;
+    border-radius: 10%;
+    box-shadow: 4px 4px 10px var(--gray-200);
+
+    /*rounded, shadow*/
+}
+.h1 {
+    font-size: 1.4rem;
+}
+
+.button {
+    border-radius: 15px;
+    background-color: var(--primary);
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+}
+
+@media (min-width: 900px) {
+    .container{
+        width: 300px;
+        margin: 30px;      
+    }
+}
