@@ -1,3 +1,25 @@
 .header {
-  border: 2px solid red;
+    margin: auto;
+    width: 60%;
+    padding-left: 0.5rem;
+}
+
+.slogan {
+    border-top: 5px solid var(--primary);
+    padding: 20px 25px;
+    margin: 0 auto;
+    width: 90%;
+    line-height: 1.6;
+}
+
+@media (min-width: 900px) {
+    .header {
+        width: 90%;
+        font-size: 3rem;
+        margin: 0 auto;
+        padding-left: 2rem;
+    }
+    .slogan {
+        width: 100%;
+    }
 }
