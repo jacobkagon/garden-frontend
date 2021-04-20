@@ -14,4 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+:root {
+  --primary: #228B22;
+}
+
+
 
