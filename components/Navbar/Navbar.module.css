@@ -1,0 +1,22 @@
+.wrapper {
+    border-bottom: 3px solid var(--primary);
+}
+
+.navbar {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 68.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+}
+
+.navbar__link {
+    font-size: 0.75rem;
+}
+
+.navbar__link + .navbar__link {
+    margin-left: 0.5rem;
+}
