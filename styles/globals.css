@@ -40,24 +40,3 @@ p {
 }
 
 
-button{
-    background-color:#A9C87F;
-    padding-left:14px;
-    padding-right: 14px;
-    padding-top:5.5px;
-    padding-bottom:5.5px;
-    border-radius: 25px;
-    border: none;
-    color:white;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-}
-
-button:hover{
-    background-color:#cbdbb5;
-    border:#A9C87F;
-}
-
-button:active{
-    color: black;
-}
