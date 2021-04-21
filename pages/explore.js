@@ -6,8 +6,8 @@ export const explore = () => {
     return (
         <>
             <Navbar />
+            <h1>Explore</h1>
             <div className={styles.wrapper}>
-                {/* <h1>Explore</h1> */}
                 <Card>Understanding</Card>
                 <Card>Responsibility</Card>
                 <Card>Space To Grow</Card>
