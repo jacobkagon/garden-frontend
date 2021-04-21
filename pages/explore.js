@@ -6,7 +6,7 @@ export const explore = () => {
     return (
         <>
             <Navbar />
-            <h1>Explore</h1>
+            <h1 className={styles.exploreHead}>Explore</h1>
             <div className={styles.wrapper}>
                 <Card>Understanding</Card>
                 <Card>Responsibility</Card>
