@@ -19,6 +19,7 @@
 }
 ._textarea {
 width: 100%;
+
 }
 
 @media(max-width: 900px){
@@ -36,8 +37,22 @@ width: 100%;
    margin-left: 0;
    margin-top: 15px;
  }
- .heading{
-   margin-bottom: 2%;
+ ._textarea{
+   font-size: 1.2em;
  }
+ .font {
+   font-size: 1.3em;
+ }
+ .heading{
+   font-size: 1.3em;
+ }
+ 
 }
+.heading {
+  margin: 5%;
+}
+
+
+
+
 
