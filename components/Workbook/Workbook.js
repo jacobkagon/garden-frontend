@@ -10,7 +10,8 @@ const Workbook = () => {
             />
 
             <div className={styles._text}>
-                <h3>Description </h3>
+                <h3 className={styles.heading}>Description</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <h3>Question and Answer</h3>
                 <textarea rows='8' className={styles._textarea}>
                     Enter your Answer.
