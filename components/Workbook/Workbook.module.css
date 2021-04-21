@@ -46,10 +46,10 @@ width: 100%;
  .heading{
    font-size: 1.3em;
  }
- 
 }
 .heading {
   margin: 5%;
+  color:var(--primary);
 }
 
 
