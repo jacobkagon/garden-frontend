@@ -12,7 +12,7 @@ const home = () => {
                 <h1 className={styles.title}>Welcome Home</h1>
                 <div styles={styles.container}>
                     <Goals />
-
+                
                     <Prompt />
                 </div>
             </div>
