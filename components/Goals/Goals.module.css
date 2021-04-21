@@ -22,7 +22,7 @@
 }
 
 .title {
-    position: fixed;
+    position: absolute;
     background-color: var(--primary);
     width: 80%;
     height: 2em;
@@ -54,9 +54,10 @@
 
 @media (min-width: 900px) {
     .card {
-        width: 40%;
+        width: 30%;
+        float: left;
     }
     .title {
-        width: 35%;
+        width: 25%;
     }
 }
