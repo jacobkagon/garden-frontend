@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '@/components/Explore/Card';
+import ExploreCard from '@/components/Explore/ExploreCard';
 import Navbar from '@/components/Navbar/Navbar';
 import styles from '@/styles/Explore.module.css';
 export const explore = () => {
@@ -8,9 +8,9 @@ export const explore = () => {
             <Navbar />
             <h1 className={styles.exploreHead}>Explore</h1>
             <div className={styles.wrapper}>
-                <Card>Understanding</Card>
-                <Card>Responsibility</Card>
-                <Card>Space To Grow</Card>
+                <ExploreCard>Gratitude</ExploreCard>
+                <ExploreCard>Inner Peace</ExploreCard>
+                <ExploreCard>Relationships</ExploreCard>
             </div>
         </>
     );

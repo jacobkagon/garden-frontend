@@ -1,9 +1,8 @@
 import React from 'react'
-import styles from './Card.module.css'
-import Button from './Button'
+import styles from './ExploreCard.module.css'
 
  
-function Card({children}) {
+function ExploreCard({children}) {
     return (
         <div className={styles.container}>
             <h1 className={styles.h1}>{children}</h1>
@@ -13,4 +12,4 @@ function Card({children}) {
     )
 }
 
-export default Card
+export default ExploreCard
