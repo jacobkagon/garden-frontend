@@ -1,0 +1,62 @@
+.card {
+    /* position: relative; */
+    /* flex-basis: 45%; */
+    margin: 1rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    max-height: 40vh;
+    float: center;
+    width: 92%;
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.cardHome {
+    /* position: absolute; */
+    padding-top: 3rem;
+
+    /* top: 0;
+    animation: scroll 10s linear 1s infinite; */
+}
+
+.title {
+    position: fixed;
+    background-color: var(--primary);
+    width: 80%;
+    height: 2em;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.goalsList {
+    min-width: 80%;
+    min-height: 3rem;
+    display: block;
+    color: var(--gray-600);
+    padding: 0.5rem;
+    /* background: var(--white); */
+    line-height: 1.4rem;
+    border-bottom: 2px solid white;
+}
+.goalsList:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+/* @keyframes scroll {
+    100% {
+        top: -100%;
+    }
+} */
+
+@media (min-width: 900px) {
+    .card {
+        width: 40%;
+    }
+    .title {
+        width: 35%;
+    }
+}
