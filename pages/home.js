@@ -1,6 +1,6 @@
 import React from 'react';
-import Goals from '@/components/Goals';
-import Prompt from '@/components/Prompt';
+import Goals from '@/components/Home/Goals';
+import Prompt from '@/components/Home/Prompt';
 import styles from '@/styles/Home.module.css';
 import Navbar from '@/components/Navbar/Navbar';
 
@@ -9,7 +9,7 @@ const home = () => {
         <>
             <Navbar />
             <div>
-                <h1>Welcome Home</h1>
+                <h1 className={styles.title}>Welcome Home</h1>
                 <div styles={styles.container}>
                     <div className={styles.card}>
                         <Goals />
