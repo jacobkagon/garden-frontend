@@ -4,7 +4,7 @@ import styles from './Card.module.css'
 function Button() {
     return (
         <div >
-            <buton className={styles.button}>Dig In</buton>
+            <button className={styles.button}>Dig In</button>
             
         </div>
     )
