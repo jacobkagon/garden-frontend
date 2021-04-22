@@ -8,9 +8,9 @@ export const explore = () => {
             <Navbar />
             <h1 className={styles.exploreHead}>Explore</h1>
             <div className={styles.wrapper}>
-                <ExploreCard>Gratitude</ExploreCard>
-                <ExploreCard>Inner Peace</ExploreCard>
-                <ExploreCard>Relationships</ExploreCard>
+                <ExploreCard topicsId={1}>Gratitude</ExploreCard>
+                <ExploreCard topicsId={2}>Inner Peace</ExploreCard>
+                <ExploreCard topicsId={3}>Relationships</ExploreCard>
             </div>
         </>
     );
