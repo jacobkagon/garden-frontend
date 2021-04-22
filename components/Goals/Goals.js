@@ -8,6 +8,27 @@ const Goals = () => {
                 <span className={styles.goalsList}>
                     <a href='/explore'>this is a hiperlink</a>
                 </span>
+                <span className={styles.goalsList}>
+                    <a href='/explore'>this is a hiperlink</a>
+                </span>
+                <span className={styles.goalsList}>
+                    <a href='/explore'>this is a hiperlink</a>
+                </span>
+                <span className={styles.goalsList}>
+                    <a href='/explore'>this is a hiperlink</a>
+                </span>
+                <span className={styles.goalsList}>
+                    <a href='/explore'>this is a hiperlink</a>
+                </span>
+                <span className={styles.goalsList}>
+                    <a href='/explore'>this is a hiperlink</a>
+                </span>
+                <span className={styles.goalsList}>
+                    <a href='/explore'>this is a hiperlink</a>
+                </span>
+                <span className={styles.goalsList}>
+                    <a href='/explore'>this is a hiperlink</a>
+                </span>
             </div>
         </div>
     );

@@ -1,5 +1,9 @@
 @media (min-width: 900px) {
     .container {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        /* grid-template-rows: repeat(2, auto); */
+        grid-gap: 0em;
+        margin: 1rem;
     }
 }
