@@ -11,6 +11,7 @@ const home = () => {
                 <Goals />
 
                 <Prompt />
+                {/* <div></div> */}
             </div>
         </>
     );
