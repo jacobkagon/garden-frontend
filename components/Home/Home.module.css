@@ -1,9 +1,37 @@
+.title {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: var(--gray-400);
+    padding: 0.5rem 0.5rem;
+    /* margin: 1rem 0.5rem; */
+    text-align: center;
+    font-style: italic;
+    text-transform: lowercase;
+}
+.image {
+    display: none;
+}
+
 @media (min-width: 900px) {
     .container {
+        height: calc(100vh - 9rem);
+
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr;
         /* grid-template-rows: repeat(2, auto); */
         grid-gap: 0em;
-        margin: 1rem;
+        /* margin: 5rem; */
+    }
+    .title {
+        text-align: right;
+        padding: 0.5rem 1rem;
+    }
+    .image {
+        display: inline;
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 10px;
+        opacity: 0.6;
+        /* clip-path: polygon(20% 0%, 80% 0%, 100% 76%, 0 76%); */
     }
 }
