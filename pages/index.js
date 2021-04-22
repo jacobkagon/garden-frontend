@@ -4,12 +4,15 @@ import Welcome from '@/components/Welcome/Welcome';
 import Navbar from '@/components/Navbar/Navbar';
 import Homepage from '@/components/Home/Home';
 
+import { useAuth } from '@/lib/auth';
+
 export default function Home() {
+    const auth = useAuth();
+
     return (
         <div>
             <Navbar />
-            {/* <Welcome /> */}
-            <Homepage />
+            {auth.user ? <Homepage /> : <Welcome />}
         </div>
     );
 }
