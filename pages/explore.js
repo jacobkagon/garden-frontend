@@ -2,7 +2,10 @@ import React from 'react';
 import ExploreCard from '@/components/Explore/ExploreCard';
 import Navbar from '@/components/Navbar/Navbar';
 import styles from '@/styles/Explore.module.css';
+import { useAuth } from '@/lib/auth';
+
 export const explore = () => {
+    const auth = useAuth();
     return (
         <>
             <Navbar />

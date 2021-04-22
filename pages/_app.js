@@ -1,8 +1,12 @@
 import '../styles/globals.css';
 import { AuthProvider } from '@/lib/auth';
 import axios from 'axios';
+import { useAuth } from '@/lib/auth';
+import Welcome from '@/components/Welcome/Welcome';
 
 function MyApp({ Component, pageProps }) {
+    const auth = useAuth();
+
     if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
         // dev code
         axios.defaults.baseURL = 'http://localhost:3001/api/v1';
@@ -11,9 +15,11 @@ function MyApp({ Component, pageProps }) {
         axios.defaults.baseURL =
             'https://the-garden-nurture-diffrence.herokuapp.com/api/v1';
     }
-
+    
     return (
+       
         <AuthProvider>
+         
             <Component {...pageProps} />
         </AuthProvider>
     );
