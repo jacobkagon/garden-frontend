@@ -9,7 +9,9 @@ const home = () => {
 
     return (
         <>
-            <h1 className={styles.title}>Welcome, {auth.user.name} </h1>
+            <h1 className={styles.title}>
+                Welcome, {auth.user.name.split(' ')[0]}
+            </h1>
             <div className={styles.container}>
                 <Goals />
 
