@@ -1,5 +1,5 @@
 .card {
-    /* position: relative; */
+    position: relative;
     /* flex-basis: 45%; */
     margin: 1rem;
     padding: 0 1rem;
@@ -22,7 +22,7 @@
 }
 
 .title {
-    position: fixed;
+    position: absolute;
     background-color: var(--primary);
     width: 80%;
     height: 2em;
@@ -51,12 +51,3 @@
         top: -100%;
     }
 } */
-
-@media (min-width: 900px) {
-    .card {
-        width: 40%;
-    }
-    .title {
-        width: 35%;
-    }
-}

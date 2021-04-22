@@ -1,9 +1,13 @@
+import Workbook from '@/components/Workbook/Workbook.js';
+import Navbar from '@/components/Navbar/Navbar';
+
 export const workbook = () => {
     return (
         <div>
-            <h1>Workbook</h1>
+            <Navbar/>
+            <Workbook/>
         </div>
-    )
-}
+    );
+};
 
-export default workbook
+export default workbook;

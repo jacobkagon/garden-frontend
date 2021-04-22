@@ -1,6 +1,5 @@
 .container {
     min-height: 100vh;
-
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
@@ -8,6 +7,12 @@
     align-items: center;
 }
 
+@media (min-width: 900px) {
+    .container {
+        flex-direction: row;
+        align-content: center;
+    }
+}
 .main {
     padding: 5rem 0;
     flex: 1;
@@ -117,11 +122,5 @@
     height: 1em;
 }
 
-@media (max-width: 600px) {
-    .grid {
-        width: 100%;
-        flex-direction: column;
-    }
-}
 
 
