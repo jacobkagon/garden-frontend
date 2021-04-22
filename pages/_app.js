@@ -5,10 +5,11 @@ import axios from 'axios';
 function MyApp({ Component, pageProps }) {
     if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
         // dev code
-        axios.defaults.baseURL = process.env.API_DEV;
+        axios.defaults.baseURL = 'http://localhost:3001/api/v1';
     } else {
         // production code
-        axios.defaults.baseURL = process.env.API_PROD;
+        axios.defaults.baseURL =
+            'https://the-garden-nurture-diffrence.herokuapp.com/api/v1';
     }
 
     return (
