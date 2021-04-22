@@ -16,6 +16,7 @@ const home = () => {
                 <img
                     className={styles.image}
                     src='http://clipart-library.com/img/873284.jpg'
+                    alt="picture of a plant"
                 />
                 <Prompt />
             </div>
