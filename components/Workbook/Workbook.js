@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Workbook.module.css';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
-const Workbook = ({ number }) => {
+const Workbook = () => {
     const [question, setQuestion] = useState('');
     const [questionChange, setQuestionChange] = useState('');
-    const [description, setDescription] = useState(" ");
+    const [description, setDescription] = useState(' ');
+    const router = useRouter();
+    const number = router.query.topics;
     //www.educative.io/edpresso/how-to-make-a-modal-using-css-html-and-javascript
 
-    https: useEffect(() => {
-      
+    useEffect(() => {
+        
+        
+        console.log(number)
         axios
             .get(`/questions_prompt/${number}`)
             .then((response) => {
                 setQuestion(response.data.question);
+                console.log(response.data.question)
             })
             .catch(function (error) {
                 // handle error
