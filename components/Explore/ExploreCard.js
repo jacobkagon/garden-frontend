@@ -10,7 +10,7 @@ function ExploreCard({ children, topicsId}) {
         <div className={styles.container}>
             <h1 className={styles.h1}>{children}</h1>
             <Link href={`/workbook/${topicsId}`}>
-                <Button>Dig In</Button>
+                Dig In
             </Link>
         </div>
     );
