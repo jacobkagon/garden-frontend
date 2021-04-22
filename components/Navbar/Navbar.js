@@ -16,10 +16,10 @@ function Navbar() {
                     <a style={{ display: 'flex', alignItems: 'flex-end' }}>
                         <h2>The Garden</h2>
                         <Image
-                            width={30}
-                            height={30}
+                            width={45}
+                            height={60}
                             responsive={true}
-                            src='/images/icons/pot.PNG'
+                            src='/images/icons/potstem.PNG'
                             alt='pot'
                         />
                     </a>
