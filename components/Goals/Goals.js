@@ -28,7 +28,10 @@ const Goals = () => {
                     isOpen={isModalOpen}
                     transition={ModalTransition.NONE}
                 >
-                    <textarea className={styles.textArea}></textarea>
+                    <textarea
+                        className={styles.textArea}
+                        placeholder='Type here...'
+                    ></textarea>
                     <button onClick={null}>save</button>
                     <button onClick={closeModal}>close</button>
                 </Modal>
