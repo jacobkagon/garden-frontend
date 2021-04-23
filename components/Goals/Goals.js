@@ -15,7 +15,7 @@ const Goals = () => {
     }, [isModalOpen]);
 
     const fetchData = () => {
-        const result = axios
+        axios
             .get('/goals_by_user')
             .then((response) => {
                 // console.log(response.data.goals);
