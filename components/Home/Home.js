@@ -15,8 +15,8 @@ const home = () => {
             </h1>
             <div className={styles.container}>
                 <Goals />
-        
-                <img src="/images/plant_image.jpeg" className={styles.image}/>
+
+                <img src='/images/plant_image.jpeg' className={styles.image} />
                 <Prompt />
             </div>
         </>
