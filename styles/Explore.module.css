@@ -12,6 +12,9 @@
     justify-content: center;
     align-items:center;
     font-size: 52px;
+    /* text-shadow: 0 0 30px hsl(75, 68%, 82%); */
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(45, 110, 55), 0 0 0.2em rgb(157, 186, 122);
+  color: white;
 }
 
 @media (min-width: 900px) {
