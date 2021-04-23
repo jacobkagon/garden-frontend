@@ -62,6 +62,7 @@ const Workbook = () => {
 
             <div className={styles._text}>
                 <h3 className={styles.heading}>Description</h3>
+                <div className={styles.border}>
                 {number === '1' ? (
                     <p className={styles.font}>
                         In positive psychology research, gratitude is strongly
@@ -90,10 +91,11 @@ const Workbook = () => {
                         or she is not aware of this desire.
                     </p>
                 ) : null}
+                </div>
 
                 <h3 className={styles.heading}>{question}</h3>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <textarea
+                    <textarea 
                         onChange={(e) => setUserAnswer(e.target.value)}
                         rows='8'
                         className={styles._textarea}
