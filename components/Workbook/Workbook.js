@@ -10,12 +10,14 @@ const Workbook = () => {
     const [description, setDescription] = useState(' ');
     const [userAnswer, setUserAnswer] = useState('');
     const [questionPromptId, setQuestionPromptId] = useState(0);
+
     const router = useRouter();
-    const number = router.query.topics;
     //www.educative.io/edpresso/how-to-make-a-modal-using-css-html-and-javascript
-    console.log(number);
+    const number = router.query.topics;
+    console.log({ number });
 
     useEffect(() => {
+        console.log({ number }, "useeffect");
         axios
             .get(`/questions_prompt/${number}`)
             .then((response) => {
@@ -27,8 +29,6 @@ const Workbook = () => {
                 console.log(error);
             });
     }, []);
-
-
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -58,7 +58,20 @@ const Workbook = () => {
             : number === '3'
             ? (description = 'Relationships')
             : null;
-            return description;
+        return description;
+    }
+
+    function newQuestion() {
+        axios
+            .get(`/questions_prompt/${number}`)
+            .then((response) => {
+                setQuestion(response.data.question);
+                setQuestionPromptId(response.data.id);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            });
     }
 
     return (
@@ -111,7 +124,15 @@ const Workbook = () => {
                         className={styles._textarea}
                         placeholder='Your Answer'
                     ></textarea>
-                    <button value='submit' className={styles.btn}>Submit</button>
+                    <button value='submit' className={styles.btn}>
+                        Submit
+                    </button>{' '}
+                    <button
+                        className={styles.btn}
+                        onClick={() => newQuestion()}
+                    >
+                        New Question
+                    </button>
                 </form>
             </div>
         </div>
