@@ -18,7 +18,7 @@ function Navbar() {
                         <Image
                             width={45}
                             height={60}
-                            responsive={true}
+                            // responsive={true}
                             src='/images/icons/potstem.PNG'
                             alt='pot'
                         />

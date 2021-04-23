@@ -13,11 +13,13 @@
     overflow: hidden;
     overflow-y: auto;
 }
-.cardHome {
-    /* position: absolute; */
+/* .cardHome {
+    
     padding-top: 3rem;
-    /* top: 0;
-    animation: scroll 10s linear 1s infinite; */
+    
+} */
+.questionsList:nth-of-type(1n) {
+    padding-top: 3rem;
 }
 
 .title {
