@@ -7,20 +7,41 @@ import 'react-simple-hook-modal/dist/styles.css';
 
 const Goals = () => {
     const [goals, setGoals] = useState([]);
+    const [goal, setGoal] = useState('');
     const { isModalOpen, openModal, closeModal } = useModal();
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [isModalOpen]);
 
     const fetchData = () => {
-        const result = axios.get('/goals').then((response) => {
-            console.log(response.data.goals);
-            setGoals(response.data.goals);
-        });
+        const result = axios
+            .get('/goals_by_user')
+            .then((response) => {
+                // console.log(response.data.goals);
+                setGoals(response.data.goals);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
     };
 
-    const addGoals = () => {};
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (goal !== '') {
+            axios
+                .post('/goals', {
+                    task: goal,
+                })
+                .then((response) => {
+                    console.log(response);
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+        }
+        document.getElementsByTagName('form')[0].reset();
+    };
 
     return (
         <div className={styles.card}>
@@ -34,13 +55,15 @@ const Goals = () => {
                     isOpen={isModalOpen}
                     transition={ModalTransition.NONE}
                 >
-                    <textarea
-                        className={styles.textArea}
-                        placeholder='type your goals here...'
-                    ></textarea>
-                    <Button onClick={null}>save</Button>
-                    <br />
-                    <Button onClick={closeModal}>close</Button>
+                    <form onSubmit={(e) => handleSubmit(e)}>
+                        <textarea
+                            className={styles.textArea}
+                            placeholder='type your goals here...'
+                            onChange={(event) => setGoal(event.target.value)}
+                        ></textarea>
+                        <button type='submit'>save</button>
+                    </form>
+                    <button onClick={closeModal}>close</button>
                 </Modal>
             </div>
             {goals?.map((goal) => (
