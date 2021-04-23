@@ -5,7 +5,7 @@ const Prompt = () => {
     return (
         <div>
             <div className={styles.card}>
-                <div className={styles.title}>Prompts</div>
+                <div className={styles.title}>Latest Entries</div>
                 <div className={styles.cardHome}>
                     <div className={styles.questionsList}>
                         Do you understanding CSS, you think you do but you
