@@ -10,16 +10,13 @@ const Workbook = () => {
     const router = useRouter();
     const number = router.query.topics;
     //www.educative.io/edpresso/how-to-make-a-modal-using-css-html-and-javascript
-
+    console.log(number);
     useEffect(() => {
-        
-        
-        console.log(number)
         axios
             .get(`/questions_prompt/${number}`)
             .then((response) => {
                 setQuestion(response.data.question);
-                console.log(response.data.question)
+                console.log(response.data.question);
             })
             .catch(function (error) {
                 // handle error
@@ -42,13 +39,34 @@ const Workbook = () => {
 
             <div className={styles._text}>
                 <h3 className={styles.heading}>Description</h3>
-                <p className={styles.font}>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                </p>
+                {number === '1' ? (
+                    <p className={styles.font}>
+                        In positive psychology research, gratitude is strongly
+                        and consistently associated with greater happiness.
+                        Gratitude helps people feel more positive emotions,
+                        relish good experiences, improve their health, deal with
+                        adversity, and build strong relationships. People feel
+                        and express gratitude in multiple ways.
+                    </p>
+                ) : number === '3' ? (
+                    <p className={styles.font}>
+                        Being more connected to friends, family, partners and
+                        others can clear your head and boost your mood. ...
+                        Whether they're friends, family members, partners,
+                        mentors, colleagues or people you're just getting to
+                        know, working on your relationships can be great for
+                        your mental health.
+                    </p>
+                ) : number === '2' ? (
+                    <p className={styles.font}>
+                        A state of inner peace eliminates anxieties, fears and
+                        worries. It also removes negative thoughts, stress, lack
+                        of satisfaction and unhappiness. It is a state of
+                        emotional and mental poise, happiness, confidence and
+                        inner strength. Everyone desires inner peace, even if he
+                        or she is not aware of this desire.
+                    </p>
+                ) : null}
 
                 <h3 className={styles.heading}>{question}</h3>
 
