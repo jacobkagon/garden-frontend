@@ -57,7 +57,7 @@
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(240, 240, 210, 0.5);
     width: 15rem;
-    height: 10rem;
+    height: 5rem;
 }
 
 @media (min-width: 900px) {
