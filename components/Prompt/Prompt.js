@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Prompt.module.css';
+import axios from 'axios';
 
 const Prompt = () => {
+    // const [question, setQuestion] = useState([])
+
+    // useEffect(() => {}
+    // ,[])
+
+    // const fetchData = () => {
+    //     const result = axios.get('/goals').then((response) => {
+    //         console.log(response.data.answers);
+    //         //setAnswers(response.data.goals);
+    //     });
+    // };
     return (
         <div>
             <div className={styles.card}>

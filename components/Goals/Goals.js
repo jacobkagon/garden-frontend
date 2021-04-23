@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Goals.module.css';
+import Button from '@/components/Button/Button';
 import axios from 'axios';
 import { Modal, useModal, ModalTransition } from 'react-simple-hook-modal';
 import 'react-simple-hook-modal/dist/styles.css';
@@ -19,10 +20,15 @@ const Goals = () => {
         });
     };
 
+    const addGoals = () => {};
+
     return (
         <div className={styles.card}>
             <div className={styles.title}>
-                Goals <button onClick={openModal}>new</button>
+                Goals
+                <Button onClick={openModal}>
+                    <strong>add</strong>
+                </Button>
                 <Modal
                     id='goals_or_any_id'
                     isOpen={isModalOpen}
@@ -30,10 +36,11 @@ const Goals = () => {
                 >
                     <textarea
                         className={styles.textArea}
-                        placeholder='Type here...'
+                        placeholder='type your goals here...'
                     ></textarea>
-                    <button onClick={null}>save</button>
-                    <button onClick={closeModal}>close</button>
+                    <Button onClick={null}>save</Button>
+                    <br />
+                    <Button onClick={closeModal}>close</Button>
                 </Modal>
             </div>
             {goals?.map((goal) => (
