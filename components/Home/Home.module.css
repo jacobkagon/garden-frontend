@@ -1,12 +1,13 @@
 .title {
     font-size: 1rem;
     line-height: 2rem;
-    color: var(--gray-400);
+    color: var(--black);
     padding: 0.5rem 0.5rem;
     /* margin: 1rem 0.5rem; */
     text-align: center;
     font-style: italic;
     text-transform: lowercase;
+    position: relative;
 }
 .image {
     display: none;
@@ -28,10 +29,17 @@
     }
     .image {
         display: inline;
-        width: 60%;
+        width: 55%;
         margin: 0 auto;
         border-radius: 10px;
         opacity: 0.6;
         /* clip-path: polygon(20% 0%, 80% 0%, 100% 76%, 0 76%); */
     }
+}
+
+.bgWrap {
+    position: absolute;
+    height: calc(100vh - 5rem);
+    width: 100vw;
+    overflow: hidden;
 }
