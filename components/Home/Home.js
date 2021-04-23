@@ -15,7 +15,7 @@ const home = () => {
                     layout='fill'
                     objectFit='cover'
                     quality={100}
-                    src='/images/paper_bg.PNG'
+                    src='/images/crinkle_light.PNG'
                     alt='explore gardening greenhouse'
                 />
             </div>
