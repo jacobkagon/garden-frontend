@@ -2,7 +2,7 @@ import React from 'react';
 import Goals from '@/components/Goals/Goals';
 import Prompt from '@/components/Prompt/Prompt';
 import styles from './Home.module.css';
-import img from '@/public/images/plant_image.jpeg';
+// import img from '';
 import { useAuth } from '@/lib/auth';
 
 const home = () => {
