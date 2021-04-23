@@ -53,6 +53,18 @@ const Workbook = () => {
         document.getElementsByTagName('form')[0].reset();
     }
 
+    function descript() {
+        let description = null;
+        number === '1'
+            ? (description = 'Gratitude')
+            : number === '2'
+            ? (description = 'Inner Peace')
+            : number === '3'
+            ? (description = 'Relationships')
+            : null;
+            return description;
+    }
+
     return (
         <div className={styles.container}>
             <img
@@ -61,41 +73,43 @@ const Workbook = () => {
             />
 
             <div className={styles._text}>
-                <h3 className={styles.heading}>Description</h3>
+                <h3 className={styles.heading}>{descript()}</h3>
                 <div className={styles.border}>
-                {number === '1' ? (
-                    <p className={styles.font}>
-                        In positive psychology research, gratitude is strongly
-                        and consistently associated with greater happiness.
-                        Gratitude helps people feel more positive emotions,
-                        relish good experiences, improve their health, deal with
-                        adversity, and build strong relationships. People feel
-                        and express gratitude in multiple ways.
-                    </p>
-                ) : number === '3' ? (
-                    <p className={styles.font}>
-                        Being more connected to friends, family, partners and
-                        others can clear your head and boost your mood. ...
-                        Whether they're friends, family members, partners,
-                        mentors, colleagues or people you're just getting to
-                        know, working on your relationships can be great for
-                        your mental health.
-                    </p>
-                ) : number === '2' ? (
-                    <p className={styles.font}>
-                        A state of inner peace eliminates anxieties, fears and
-                        worries. It also removes negative thoughts, stress, lack
-                        of satisfaction and unhappiness. It is a state of
-                        emotional and mental poise, happiness, confidence and
-                        inner strength. Everyone desires inner peace, even if he
-                        or she is not aware of this desire.
-                    </p>
-                ) : null}
+                    {number === '1' ? (
+                        <p className={styles.font}>
+                            In positive psychology research, gratitude is
+                            strongly and consistently associated with greater
+                            happiness. Gratitude helps people feel more positive
+                            emotions, relish good experiences, improve their
+                            health, deal with adversity, and build strong
+                            relationships. People feel and express gratitude in
+                            multiple ways.
+                        </p>
+                    ) : number === '3' ? (
+                        <p className={styles.font}>
+                            Being more connected to friends, family, partners
+                            and others can clear your head and boost your mood.
+                            ... Whether they're friends, family members,
+                            partners, mentors, colleagues or people you're just
+                            getting to know, working on your relationships can
+                            be great for your mental health.
+                        </p>
+                    ) : number === '2' ? (
+                        <p className={styles.font}>
+                            A state of inner peace eliminates anxieties, fears
+                            and worries. It also removes negative thoughts,
+                            stress, lack of satisfaction and unhappiness. It is
+                            a state of emotional and mental poise, happiness,
+                            confidence and inner strength. Everyone desires
+                            inner peace, even if he or she is not aware of this
+                            desire.
+                        </p>
+                    ) : null}
                 </div>
 
                 <h3 className={styles.heading}>{question}</h3>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <textarea 
+                    <textarea
                         onChange={(e) => setUserAnswer(e.target.value)}
                         rows='8'
                         className={styles._textarea}
