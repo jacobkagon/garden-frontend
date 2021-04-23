@@ -12,8 +12,6 @@ export const explore = () => {
             <Navbar />
             <div className={styles.bgWrap}>
                 <Image
-                    // width={45}
-                    // height={60}
                     layout='fill'
                     objectFit='cover'
                     quality={100}
