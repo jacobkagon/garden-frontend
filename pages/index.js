@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
+import { ModalProvider, ModalTransition } from 'react-simple-hook-modal';
+
 import Welcome from '@/components/Welcome/Welcome';
 import Navbar from '@/components/Navbar/Navbar';
 import Homepage from '@/components/Home/Home';
@@ -8,11 +9,10 @@ import { useAuth } from '@/lib/auth';
 
 export default function Home() {
     const auth = useAuth();
-
     return (
-        <div>
+        <ModalProvider>
             <Navbar />
             {auth.user ? <Homepage /> : <Welcome />}
-        </div>
+        </ModalProvider>
     );
 }

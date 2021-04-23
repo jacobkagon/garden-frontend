@@ -52,6 +52,10 @@
     }
 } */
 
+.textArea {
+    border: 1px solid;
+}
+
 @media (min-width: 900px) {
     .card {
         width: 60%;
