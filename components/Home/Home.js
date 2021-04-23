@@ -2,6 +2,7 @@ import React from 'react';
 import Goals from '@/components/Goals/Goals';
 import Prompt from '@/components/Prompt/Prompt';
 import styles from './Home.module.css';
+import img from '@/public/images/plant_image.jpeg';
 import { useAuth } from '@/lib/auth';
 
 const home = () => {
@@ -15,10 +16,7 @@ const home = () => {
             <div className={styles.container}>
                 <Goals />
 
-                <img
-                    className={styles.image}
-                    src='http://clipart-library.com/img/873284.jpg'
-                    alt="picture of a plant"
+                <img src={img} className={styles.image}   
                 />
                 <Prompt />
             </div>
