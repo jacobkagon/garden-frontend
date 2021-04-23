@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Workbook.module.css';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import Button from '@/components/Button/Button.js';
 
 const Workbook = () => {
     const [question, setQuestion] = useState('');
@@ -98,7 +99,7 @@ const Workbook = () => {
                         className={styles._textarea}
                         placeholder='Your Answer'
                     ></textarea>
-                    <input type='submit' value='submit'></input>
+                    <button value='submit'>Submit</button>
                 </form>
             </div>
         </div>
