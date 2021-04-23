@@ -43,3 +43,6 @@ p {
     --white: #fff;
 }
 
+button {
+    font-family: 'Roboto Mono', monospace;
+}

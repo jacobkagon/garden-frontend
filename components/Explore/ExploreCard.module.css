@@ -10,7 +10,8 @@
     background-color: var(--secondary);
     position: relative;
     border-radius: 10%;
-    box-shadow: 4px 4px 10px var(--gray-200);
+    box-shadow: 3px 3px 7px var(--gray-200);
+    opacity:92%
 
     /*rounded, shadow*/
 }
