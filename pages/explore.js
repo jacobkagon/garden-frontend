@@ -17,7 +17,7 @@ export const explore = () => {
                     layout='fill'
                     objectFit='cover'
                     quality={100}
-                    src='/images/icons/explore_garden.jpeg'
+                    src='/images/icons/explore_garden.png'
                     alt='explore gardening greenhouse'
                 />
             </div>
