@@ -99,7 +99,7 @@ const Workbook = () => {
                         className={styles._textarea}
                         placeholder='Your Answer'
                     ></textarea>
-                    <button value='submit'>Submit</button>
+                    <button value='submit' className={styles.btn}>Submit</button>
                 </form>
             </div>
         </div>
