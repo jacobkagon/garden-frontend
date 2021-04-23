@@ -12,12 +12,12 @@ export const explore = () => {
             <Navbar />
             <div className={styles.bgWrap}>
                 <Image
-                    width={45}
-                    height={60}
+                    // width={45}
+                    // height={60}
                     layout='fill'
                     objectFit='cover'
                     quality={100}
-                    src='/images/icons/explore_garden.png'
+                    src='/images/explore_garden_new.PNG'
                     alt='explore gardening greenhouse'
                 />
             </div>
