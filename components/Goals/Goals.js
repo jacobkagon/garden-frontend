@@ -4,6 +4,7 @@ import Button from '@/components/Button/Button';
 import axios from 'axios';
 import { Modal, useModal, ModalTransition } from 'react-simple-hook-modal';
 import 'react-simple-hook-modal/dist/styles.css';
+import GoalModal from '@/components/Goals/GoalModal/GoalModal';
 
 const Goals = () => {
     const [goals, setGoals] = useState([]);
@@ -12,7 +13,7 @@ const Goals = () => {
 
     useEffect(() => {
         fetchData();
-    }, [isModalOpen]);
+    }, []);
 
     const fetchData = () => {
         axios
@@ -28,6 +29,7 @@ const Goals = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if (goal !== '') {
             axios
                 .post('/goals', {
@@ -35,46 +37,51 @@ const Goals = () => {
                 })
                 .then((response) => {
                     console.log(response);
+                    setGoal('');
+                    fetchData();
                 })
                 .catch((err) => {
                     console.error(err);
                 });
         }
-        document.getElementsByTagName('form')[0].reset();
     };
 
+    function handleChange(e) {
+        setGoal(e.target.value);
+    }
+
     return (
-        <div className={styles.card}>
-            <div className={styles.title}>
-                Goals
-                <Button onClick={openModal}>
-                    <strong>add</strong>
-                </Button>
-                <Modal
-                    id='goals_or_any_id'
-                    isOpen={isModalOpen}
-                    transition={ModalTransition.NONE}
-                >
-                    <form onSubmit={(e) => handleSubmit(e)}>
-                        <textarea
-                            className={styles.textArea}
-                            placeholder='type your goals here...'
-                            onChange={(event) => setGoal(event.target.value)}
-                        ></textarea>
-                        <button type='submit'>save</button>
-                    </form>
-                    <button onClick={closeModal}>close</button>
-                </Modal>
-            </div>
-            {goals?.map((goal) => (
-                <div key={goal.id} className={styles.cardHome}>
-                    <span className={styles.goalsList}>
-                        <input name='isDone' type='checkbox' />{' '}
-                        <a href='/explore'>{goal.task}</a>
-                    </span>
+        <>
+            <div className={styles.card}>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type='text'
+                        placeholder='add a goal'
+                        value={goal}
+                        onChange={handleChange}
+                    />
+                    <input type='submit' value='Submit' />
+                </form>
+                <div className={styles.title}>
+                    Goals
+                    {/*  */}
                 </div>
-            ))}
-        </div>
+                {goals?.map((goal) => (
+                    <div key={goal.id} className={styles.cardHome}>
+                        <span className={styles.goalsList}>
+                            <input name='isDone' type='checkbox' />
+
+                            {goal.task}
+                            <GoalModal
+                                id={goal.id}
+                                goalTask={goal.task}
+                                fetchData={fetchData}
+                            />
+                        </span>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 
