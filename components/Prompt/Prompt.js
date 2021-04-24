@@ -26,16 +26,20 @@ const Prompt = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.title}>Latest Entries</div>
-            <div className={styles.answersWrapper}>
+            <div className={styles.promptsWrapper}>
                 {answers.map((answer) => (
-                    <div key={answer.id} className={styles.cardHome}>
-                        <div className={styles.questionsList}>
+                    <div key={answer.id} className={styles.prompt}>
+                        <div className={styles.promptQuestion}>
                             {answer.question_prompt.question}
-                            <span className={styles.answersList}>
-                                <a href='/explore'>{answer.answer}</a>
-                            </span>
-                            <div className={styles.topic}>
-                                {answer.question_prompt.topic} <br />
+                        </div>
+                        <div className={styles.promptAnswer}>
+                            {answer.answer}
+                        </div>
+                        <div className={styles.promptFooter}>
+                            <div style={{ textAlign: 'right' }}>
+                                {answer.question_prompt.topic}
+                            </div>
+                            <div style={{ textAlign: 'right' }}>
                                 {new Date(answer.created_at).toDateString()}
                             </div>
                         </div>
