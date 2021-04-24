@@ -26,17 +26,21 @@ function Navbar() {
                 </Link>
 
                 {auth.user ? (
-                    <nav>
+                    <nav className={styles.nav_wrap_right}>
                         <Link href='/explore'>
                             <a
                                 className={styles.navbar__link}
+                                className={styles.un}
+                                // className={styles.nav_wrap_right}
                             >
                                 Explore Garden
                             </a>
                         </Link>
                         <button
                             className={styles.navbar__link}
+                            className={styles.un}
                             onClick={() => auth.signout()}
+                            // className={styles.nav_wrap_right}
                         >
                             Sign Out
                         </button>

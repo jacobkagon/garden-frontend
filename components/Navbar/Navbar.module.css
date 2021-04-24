@@ -22,10 +22,6 @@
     cursor: pointer;
 }
 
-.navbar__link + .navbar__link {
-    margin-left: 0.5rem;
-}
-
 @media (min-width: 900px) {
     .navbar__link {
         font-size: 1rem;
@@ -33,4 +29,37 @@
     .navbar__link + .navbar__link {
         margin-left: 1rem;
     }
+}
+
+
+.un {
+  background-color: white;
+  font-size: 1rem;
+  border: none;
+}
+
+.un + .un {
+    margin-left: 0.7rem;
+}
+
+.un:after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: var(--primary);
+  transition: 300ms;
+  
+}
+
+.un:hover:after {
+  width: 100%;
+}
+
+.nav_wrap_right{
+    display:flex;
+    align-items: flex-end;
+    margin-left:.08rem
+    /* ;
+    float:right; */
 }
