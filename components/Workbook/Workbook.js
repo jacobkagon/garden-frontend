@@ -14,10 +14,10 @@ const Workbook = () => {
     const router = useRouter();
     //www.educative.io/edpresso/how-to-make-a-modal-using-css-html-and-javascript
     const number = router.query.topics;
-    console.log({ number });
+    // console.log({ number });
 
     useEffect(() => {
-        console.log({ number }, "useeffect");
+        // console.log({ number }, "useeffect");
         axios
             .get(`/questions_prompt/${number}`)
             .then((response) => {

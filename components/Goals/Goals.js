@@ -68,7 +68,7 @@ const Goals = () => {
 
     return (
         <>
-            <div className={styles.card}>
+            <div className={styles.wrapper}>
                 <form onSubmit={handleSubmit}>
                     <input
                         type='text'
@@ -78,31 +78,34 @@ const Goals = () => {
                     />
                     <input type='submit' value='Submit' />
                 </form>
-                <div className={styles.title}>
-                    Goals
-                    {/*  */}
-                </div>
-                {goals?.map((goal) => (
-                    <div key={goal.id} className={styles.cardHome}>
-                        <span className={styles.goalsList}>
-                            <input
-                                name='isDone'
-                                checked={goal.is_done}
-                                type='checkbox'
-                                onChange={(e) =>
-                                    handleInputChange(e, goal.id, goal.is_done)
-                                }
-                            />
+                <div className={styles.title}>Goals</div>
+                <div className={styles.tasksWrapper}>
+                    {goals?.map((goal) => (
+                        <div key={goal.id} className={styles.task}>
+                            <div>
+                                <input
+                                    name='isDone'
+                                    checked={goal.is_done}
+                                    type='checkbox'
+                                    onChange={(e) =>
+                                        handleInputChange(
+                                            e,
+                                            goal.id,
+                                            goal.is_done
+                                        )
+                                    }
+                                />
 
-                            {goal.task}
+                                <span>{goal.task}</span>
+                            </div>
                             <GoalModal
                                 id={goal.id}
                                 goalTask={goal.task}
                                 fetchData={fetchData}
                             />
-                        </span>
-                    </div>
-                ))}
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     );

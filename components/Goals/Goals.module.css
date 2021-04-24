@@ -1,48 +1,37 @@
-.card {
+.wrapper {
     position: relative;
-    /* flex-basis: 45%; */
     margin: 1rem auto;
-    /* padding: 0 1rem; */
     text-decoration: none;
     border-radius: 10px;
     background-color: var(--secondary);
 
-    float: center;
     width: 70%;
-    height: 30vh;
-    overflow: hidden;
-    overflow-y: auto;
-}
-.cardHome {
-    /* position: absolute; */
-    padding-top: 3rem;
-
-    /* top: 0;
-    animation: scroll 10s linear 1s infinite; */
+    min-height: 30vh;
+    padding: 0.5rem;
+    box-shadow: 5px 5px 10px gray;
 }
 
 .title {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
     background-color: var(--primary);
-    width: 100%;
-    height: 2em;
-    font-size: 1.5rem;
-    /* text-align: center; */
+    text-align: center;
+    height: auto;
+    font-size: 1rem;
     color: white;
     border-radius: 10px;
-    padding: 0.5rem;
-    margin-bottom: 2rem;
+    padding: 0.2rem;
+    margin: 10px;
 }
-.goalsList {
-    min-width: 80%;
-    min-height: 3rem;
-    display: block;
+
+.tasksWrapper {
+    position: relative;
+    overflow-y: scroll;
+    max-height: 30vh;
+}
+
+.task {
+    font-size: 0.7rem;
     color: var(--gray-400);
     padding: 0.5rem;
-    /* background: var(--white); */
-    line-height: 1.4rem;
     border-bottom: 2px solid white;
 }
 .goalsList:hover {

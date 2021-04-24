@@ -7,7 +7,6 @@ import { useAuth } from '@/lib/auth';
 
 function Navbar() {
     const auth = useAuth();
-    console.log(auth.user);
 
     return (
         <header className={styles.wrapper}>

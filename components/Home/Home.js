@@ -26,7 +26,7 @@ const home = () => {
                 <Goals />
 
                 <img src='/images/plant_image.PNG' className={styles.image} />
-                <Prompt />
+                {/* <Prompt /> */}
             </div>
         </>
     );
