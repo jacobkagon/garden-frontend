@@ -67,24 +67,17 @@ const Goals = () => {
     }
 
     return (
-        <>
-            <div className={styles.card}>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type='text'
-                        placeholder='add a goal'
-                        value={goal}
-                        onChange={handleChange}
-                    />
-                    <input type='submit' value='Submit' />
-                </form>
-                <div className={styles.title}>
-                    Goals
-                    {/*  */}
-                </div>
+        <div className={styles.wrapper}>
+            <div className={styles.title}>Goals</div>
+            <div className={styles.tasksWrapper}>
                 {goals?.map((goal) => (
-                    <div key={goal.id} className={styles.cardHome}>
-                        <span className={styles.goalsList}>
+                    <div key={goal.id} className={styles.task}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}
+                        >
                             <input
                                 name='isDone'
                                 checked={goal.is_done}
@@ -93,18 +86,38 @@ const Goals = () => {
                                     handleInputChange(e, goal.id, goal.is_done)
                                 }
                             />
-
-                            {goal.task}
-                            <GoalModal
-                                id={goal.id}
-                                goalTask={goal.task}
-                                fetchData={fetchData}
-                            />
-                        </span>
+                            <div
+                                style={{ marginLeft: '5px' }}
+                                className={
+                                    goal.is_done ? styles.taskDone : null
+                                }
+                            >
+                                {goal.task}
+                            </div>
+                        </div>
+                        <GoalModal
+                            id={goal.id}
+                            goalTask={goal.task}
+                            fetchData={fetchData}
+                        />
                     </div>
                 ))}
             </div>
-        </>
+            <form onSubmit={handleSubmit} className={styles.taskForm}>
+                <input
+                    type='text'
+                    placeholder='add a goal'
+                    value={goal}
+                    onChange={handleChange}
+                    className={styles.inputTask}
+                />
+                <input
+                    type='submit'
+                    value='Submit'
+                    className={styles.btnSubmit}
+                />
+            </form>
+        </div>
     );
 };
 

@@ -1,8 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 5.2rem);
+}
+
 .title {
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1rem;
     color: var(--black);
-    padding: 0.5rem 0.5rem;
     /* margin: 1rem 0.5rem; */
     text-align: center;
     font-style: italic;
@@ -15,13 +20,12 @@
 
 @media (min-width: 900px) {
     .container {
-        height: calc(100vh - 9rem);
-
+        /* height: calc(100vh - 9rem); */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        /* grid-template-rows: repeat(2, auto); */
-        grid-gap: 0em;
-        /* margin: 5rem; */
+        /* grid-gap: 0em; */
+        /* display: flex; */
+        /* justify-content: space-evenly; */
     }
     .title {
         text-align: right;
@@ -30,6 +34,7 @@
     .image {
         display: inline;
         width: 55%;
+        max-height: 70vh;
         margin: 0 auto;
         border-radius: 10px;
         opacity: 0.6;
@@ -39,7 +44,8 @@
 
 .bgWrap {
     position: absolute;
-    height: calc(100vh - 5.2rem);
+    /* height: calc(100vh - 5.2rem); */
+    height: inherit;
     width: 100vw;
     overflow: hidden;
 }
