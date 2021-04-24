@@ -69,20 +69,16 @@ const Goals = () => {
     return (
         <>
             <div className={styles.wrapper}>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type='text'
-                        placeholder='add a goal'
-                        value={goal}
-                        onChange={handleChange}
-                    />
-                    <input type='submit' value='Submit' />
-                </form>
                 <div className={styles.title}>Goals</div>
                 <div className={styles.tasksWrapper}>
                     {goals?.map((goal) => (
                         <div key={goal.id} className={styles.task}>
-                            <div>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }}
+                            >
                                 <input
                                     name='isDone'
                                     checked={goal.is_done}
@@ -95,8 +91,14 @@ const Goals = () => {
                                         )
                                     }
                                 />
-
-                                <span>{goal.task}</span>
+                                <div
+                                    style={{ marginLeft: '5px' }}
+                                    className={
+                                        goal.is_done ? styles.taskDone : null
+                                    }
+                                >
+                                    {goal.task}
+                                </div>
                             </div>
                             <GoalModal
                                 id={goal.id}
@@ -106,6 +108,20 @@ const Goals = () => {
                         </div>
                     ))}
                 </div>
+                <form onSubmit={handleSubmit} className={styles.taskForm}>
+                    <input
+                        type='text'
+                        placeholder='add a goal'
+                        value={goal}
+                        onChange={handleChange}
+                        className={styles.inputTask}
+                    />
+                    <input
+                        type='submit'
+                        value='Submit'
+                        className={styles.btnSubmit}
+                    />
+                </form>
             </div>
         </>
     );

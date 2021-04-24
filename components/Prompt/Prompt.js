@@ -24,7 +24,7 @@ const Prompt = () => {
     };
     console.log(answers);
     return (
-        <div>
+        <>
             <div className={styles.card}>
                 <div className={styles.title}>Latest Entries</div>
                 {answers.map((answer) => (
@@ -42,7 +42,7 @@ const Prompt = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 };
 

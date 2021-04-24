@@ -3,7 +3,7 @@ import { ModalProvider, ModalTransition } from 'react-simple-hook-modal';
 
 import Welcome from '@/components/Welcome/Welcome';
 import Navbar from '@/components/Navbar/Navbar';
-import Homepage from '@/components/Home/Home';
+import HomePage from '@/components/Home/Home';
 
 import { useAuth } from '@/lib/auth';
 
@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <ModalProvider>
             <Navbar />
-            {auth.user ? <Homepage /> : <Welcome />}
+            {auth.user ? <HomePage /> : <Welcome />}
         </ModalProvider>
     );
 }

@@ -1,61 +1,79 @@
 .wrapper {
     position: relative;
+    width: 80%;
+    padding: 1rem;
     margin: 1rem auto;
-    text-decoration: none;
+    height: 40vh;
     border-radius: 10px;
     background-color: var(--secondary);
-
-    width: 70%;
-    min-height: 30vh;
-    padding: 0.5rem;
     box-shadow: 5px 5px 10px gray;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
     background-color: var(--primary);
     text-align: center;
     height: auto;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     border-radius: 10px;
     padding: 0.2rem;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .tasksWrapper {
-    position: relative;
-    overflow-y: scroll;
-    max-height: 30vh;
+    overflow-y: auto;
+    height: 100%;
 }
 
 .task {
     font-size: 0.7rem;
-    color: var(--gray-400);
+    color: var(--gray-600);
     padding: 0.5rem;
     border-bottom: 2px solid white;
 }
+
+.taskDone {
+    text-decoration: line-through;
+}
+
 .goalsList:hover {
     color: var(--primary);
     cursor: pointer;
 }
-/* @keyframes scroll {
-    100% {
-        top: -100%;
-    }
-} */
 
-.textArea {
-    border: 5px solid;
-    border-radius: 10px;
-    border-color: var(--primary);
-    width: 15rem;
-    height: 5rem;
+.taskForm {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.taskForm > .inputTask {
+    height: 30px;
+    border: 2px solid var(--gray-200);
+    border-radius: 5px;
+    width: 70%;
+}
+
+.btnSubmit {
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 0 5px;
+    color: white;
+    width: 20%;
 }
 
 @media (min-width: 900px) {
-    .card {
-        width: 60%;
-        height: 50vh;
-        margin-top: 5rem;
+    .wrapper {
+        height: 65vh;
+    }
+    .task {
+        font-size: 0.8rem;
+    }
+
+    .title {
+        font-size: 2rem;
     }
 }
