@@ -30,13 +30,18 @@ const Prompt = () => {
                 {answers.map((answer) => (
                     <div key={answer.id} className={styles.cardHome}>
                         <div className={styles.questionsList}>
-                            {answer.question_prompt.question}
+                            {/* {answer.question_prompt.question} */}
                             <span className={styles.answersList}>
                                 <a href='/explore'>{answer.answer}</a>
+                                
                             </span>
+                            <div>
+                                Read More...
+                            </div>
                             <div className={styles.topic}>
                                 {answer.question_prompt.topic} <br />
                                 {new Date(answer.created_at).toDateString()}
+
                             </div>
                         </div>
                     </div>
