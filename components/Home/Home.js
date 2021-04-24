@@ -29,7 +29,7 @@ const Home = () => {
                         src='/images/plant_image.PNG'
                         className={styles.image}
                     />
-                    {/* <Prompt /> */}
+                    <Prompt />
                 </div>
             </div>
         </>

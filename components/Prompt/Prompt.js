@@ -24,9 +24,9 @@ const Prompt = () => {
     };
     console.log(answers);
     return (
-        <>
-            <div className={styles.card}>
-                <div className={styles.title}>Latest Entries</div>
+        <div className={styles.wrapper}>
+            <div className={styles.title}>Latest Entries</div>
+            <div className={styles.answersWrapper}>
                 {answers.map((answer) => (
                     <div key={answer.id} className={styles.cardHome}>
                         <div className={styles.questionsList}>
@@ -42,7 +42,7 @@ const Prompt = () => {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 
