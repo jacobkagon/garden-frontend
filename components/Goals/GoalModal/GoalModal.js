@@ -25,10 +25,25 @@ const GoalModal = ({ id, goalTask, fetchData }) => {
             });
     };
 
+    const deleteTask = () => {
+        axios
+            .delete(`/goals/${id}`)
+            .then((response) => {
+                console.log(response);
+                fetchData();
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
+
     return (
         <>
             <Button onClick={openModal}>
                 <strong>edit</strong>
+            </Button>
+            <Button onClick={deleteTask}>
+                <strong>delete</strong>
             </Button>
             <Modal
                 id='goals_or_any_id'

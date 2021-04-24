@@ -9,6 +9,7 @@ import GoalModal from '@/components/Goals/GoalModal/GoalModal';
 const Goals = () => {
     const [goals, setGoals] = useState([]);
     const [goal, setGoal] = useState('');
+    // const [isDone, setIsDone] = useState('goal.is_done');
     const { isModalOpen, openModal, closeModal } = useModal();
 
     useEffect(() => {
@@ -50,6 +51,21 @@ const Goals = () => {
         setGoal(e.target.value);
     }
 
+    function handleInputChange(e, id, isDone) {
+        e.preventDefault();
+        axios
+            .patch(`/goals/${id}`, {
+                is_done: !isDone,
+            })
+            .then((response) => {
+                console.log(response);
+                fetchData();
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }
+
     return (
         <>
             <div className={styles.card}>
@@ -69,7 +85,14 @@ const Goals = () => {
                 {goals?.map((goal) => (
                     <div key={goal.id} className={styles.cardHome}>
                         <span className={styles.goalsList}>
-                            <input name='isDone' type='checkbox' />
+                            <input
+                                name='isDone'
+                                checked={goal.is_done}
+                                type='checkbox'
+                                onChange={(e) =>
+                                    handleInputChange(e, goal.id, goal.is_done)
+                                }
+                            />
 
                             {goal.task}
                             <GoalModal
