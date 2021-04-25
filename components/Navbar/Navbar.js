@@ -10,7 +10,6 @@ function Navbar() {
 
     return (
         <header className={styles.wrapper}>
-            <div style={{ display: 'flex', alignItems: 'flex-end' }}>
                 <div className={styles.navbar}>
                     <Link href='/'>
                         <a style={{ display: 'flex', alignItems: 'flex-end' }}>
@@ -27,9 +26,6 @@ function Navbar() {
                     </Link>
 
                     {auth.user ? (
-                        <div className={styles.nav_right_wrappy}
-                            // style={{ display: 'flex', alignItems: 'flex-end', flexDirection: 'row'}}
-                        >
                             <nav >
                                 <Link href='/explore'>
                                     <a
@@ -49,7 +45,6 @@ function Navbar() {
                                     Sign Out
                                 </button>
                             </nav>
-                        </div>
                     ) : (
                         <nav>
                             <button
@@ -61,7 +56,6 @@ function Navbar() {
                         </nav>
                     )}
                 </div>
-            </div>
         </header>
     );
 }

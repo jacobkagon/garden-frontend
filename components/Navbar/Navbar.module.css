@@ -60,16 +60,16 @@
     width: 100%;
 }
 
-.nav_wrap_right {
+/* .nav_wrap_right {
     display: flex;
     align-items: flex-end;
     margin-left: 0.08rem;
     /* ;
     float:right; */
-}
+/* } */ 
 
-.nav_right_wrappy {
+/* .nav_right_wrappy {
     display: flex;
     align-items: flex-end;
     flex-direction: row;
-}
+} */
