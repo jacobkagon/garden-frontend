@@ -26,7 +26,7 @@ function Navbar() {
                     </Link>
 
                     {auth.user ? (
-                            <nav >
+                            <nav className={styles.nav_wrap_right}>
                                 <Link href='/explore'>
                                     <a
                                         className={styles.navbar__link}
