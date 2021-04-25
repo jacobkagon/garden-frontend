@@ -10,6 +10,13 @@
     cursor: pointer;
 }
 
+.btnEdit:hover {
+    background-color: #cbdbb5;
+    border-radius: 20%;
+    margin: auto;
+    cursor: pointer;
+}
+
 .btnDelete {
     background-color: lightcoral;
     border-radius: 20%;
@@ -17,6 +24,15 @@
     margin-left: 5px;
     cursor: pointer;
 }
+
+.btnDelete:hover {
+    background-color: rgb(237, 160, 160);
+    border-radius: 20%;
+    margin: auto;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
 
 .wrapper {
     margin-top: 1000px;
