@@ -87,9 +87,12 @@ const Goals = () => {
                                 }
                             />
                             <div
-                                style={{ marginLeft: '5px' }}
+                                style={{ marginLeft: '5px', cursor: 'pointer' }}
                                 className={
                                     goal.is_done ? styles.taskDone : null
+                                }
+                                onClick={(e) =>
+                                    handleInputChange(e, goal.id, goal.is_done)
                                 }
                             >
                                 {goal.task}
