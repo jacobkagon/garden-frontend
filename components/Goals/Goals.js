@@ -70,6 +70,20 @@ const Goals = () => {
         <div className={styles.wrapper}>
             <div className={styles.title}>Goals</div>
             <div className={styles.tasksWrapper}>
+            <form onSubmit={handleSubmit} className={styles.taskForm}>
+                <input
+                    type='text'
+                    placeholder='add a goal'
+                    value={goal}
+                    onChange={handleChange}
+                    className={styles.inputTask}
+                />
+                <input
+                    type='submit'
+                    value='Submit'
+                    className={styles.btnSubmit}
+                />
+            </form>
                 {goals?.map((goal) => (
                     <div key={goal.id} className={styles.task}>
                         <div
@@ -106,20 +120,7 @@ const Goals = () => {
                     </div>
                 ))}
             </div>
-            <form onSubmit={handleSubmit} className={styles.taskForm}>
-                <input
-                    type='text'
-                    placeholder='add a goal'
-                    value={goal}
-                    onChange={handleChange}
-                    className={styles.inputTask}
-                />
-                <input
-                    type='submit'
-                    value='Submit'
-                    className={styles.btnSubmit}
-                />
-            </form>
+           {/* form was here */}
         </div>
     );
 };
