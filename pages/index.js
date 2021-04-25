@@ -11,7 +11,9 @@ export default function Home() {
     const auth = useAuth();
     return (
         <div>
-            <Head> <title>The Garden</title></Head>
+            <Head>
+                <title>The Garden</title>
+            </Head>
             <ModalProvider>
                 <Navbar />
                 {auth.user ? <HomePage /> : <Welcome />}
