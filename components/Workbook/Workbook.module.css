@@ -4,7 +4,10 @@
     justify-content: center;
     text-align: center;
     padding: 0.5em 5rem;
-
+}
+._text{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 .border {
     border: 3px solid var(--primary);
@@ -24,6 +27,7 @@
     width: 100%;
     border: 3px solid var(--primary);
     border-radius: 10px;
+   
 }
 .form {
     border: 3px solid var(--primary);
@@ -45,17 +49,17 @@
     }
 
     ._text {
-        
         margin-top: 35px;
         align-items: center;
         justify-content: center;
-       
     }
     ._textarea {
-        font-size: 1em;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
     }
     .font {
-        font-size: 1em;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
         font-weight: bold;
     }
     .heading {
@@ -70,7 +74,6 @@
         justify-content: center;
         align-items: center;
         min-height: calc(100vh - 4rem);
-
 
         flex-direction: column;
     }
@@ -89,6 +92,9 @@
 .heading {
     margin: 5%;
     color: var(--primary);
+    font-size: 1.25rem;
+line-height: 1.75rem;
+font-weight: bold;
 }
 
 .btn {
