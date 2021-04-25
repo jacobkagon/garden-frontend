@@ -2,6 +2,7 @@
     text-align: right;
     padding-right: 10px;
 }
+
 .btnEdit {
     background-color: var(--primary);
     border-radius: 20%;
@@ -15,10 +16,32 @@
     margin-left: 5px;
 }
 
+.wrapper {
+    margin-top: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
+}
+
 .textArea {
-    border: 5px solid;
+    border: 2px solid var(--primary);
     border-radius: 10px;
-    border-color: var(--primary);
-    width: 15rem;
-    height: 5rem;
+    width: 100%;
+    height: 20vh;
+    resize: none;
+}
+
+.btnClose {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+
+.btnSubmit {
+    background-color: var(--primary);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 3px 7px;
+    color: white;
 }
