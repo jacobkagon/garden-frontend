@@ -3,7 +3,7 @@ import styles from './Workbook.module.css';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import Button from '@/components/Button/Button.js';
-import Link from 'next/link'
+import Link from 'next/link';
 
 const Workbook = () => {
     const [question, setQuestion] = useState('');
@@ -41,7 +41,7 @@ const Workbook = () => {
             .then(function (response) {
                 console.log(response);
                 // grab the jwt token
-                router.push("/")
+                router.push('/');
             })
             .catch(function (error) {
                 console.log(error);
@@ -49,7 +49,6 @@ const Workbook = () => {
 
         setUserAnswer('');
         document.getElementsByTagName('form')[0].reset();
-
     }
 
     function descript() {
@@ -127,11 +126,9 @@ const Workbook = () => {
                         className={styles._textarea}
                         placeholder='Your Answer'
                     ></textarea>
-                    
                     <button value='submit' className={styles.btn}>
                         Submit
-                        </button>{' '}
-
+                    </button>{' '}
                     <button
                         type='button'
                         className={styles.btn}
