@@ -64,8 +64,19 @@
     color: white;
     width: 20%;
     font-size: 0.65em;
-
+    font-family: 'Roboto', sans-serif;
 }
+
+.btnSubmit:hover {
+    background-color: #cbdbb5;
+    border: #a9c87f;
+    cursor: pointer;
+}
+
+.btnSubmit:active {
+    color: black;
+}
+
 
 @media (min-width: 900px) {
     .wrapper {

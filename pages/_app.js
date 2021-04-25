@@ -3,6 +3,7 @@ import { AuthProvider } from '@/lib/auth';
 import axios from 'axios';
 import { useAuth } from '@/lib/auth';
 import Welcome from '@/components/Welcome/Welcome';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
     const auth = useAuth();
@@ -17,9 +18,10 @@ function MyApp({ Component, pageProps }) {
     }
     
     return (
-       
         <AuthProvider>
-         
+            <Head>
+                <title>The Garden</title>
+            </Head>
             <Component {...pageProps} />
         </AuthProvider>
     );

@@ -10,9 +10,14 @@ import { useAuth } from '@/lib/auth';
 export default function Home() {
     const auth = useAuth();
     return (
-        <ModalProvider>
-            <Navbar />
-            {auth.user ? <HomePage /> : <Welcome />}
-        </ModalProvider>
+        <div>
+            <Head>
+                <title>The Garden</title>
+            </Head>
+            <ModalProvider>
+                <Navbar />
+                {auth.user ? <HomePage /> : <Welcome />}
+            </ModalProvider>
+        </div>
     );
 }
