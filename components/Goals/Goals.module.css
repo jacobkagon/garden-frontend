@@ -33,7 +33,6 @@
     color: var(--gray-600);
     padding: 0.5rem;
     border-bottom: 2px solid white;
-    
 }
 
 .taskDone {
@@ -64,14 +63,15 @@
     padding: 0 5px;
     color: white;
     width: 20%;
-    
+    font-size: 0.65em;
+
 }
 
 @media (min-width: 900px) {
     .wrapper {
         height: 65vh;
     }
-    
+
     .task {
         font-size: 0.8rem;
     }
