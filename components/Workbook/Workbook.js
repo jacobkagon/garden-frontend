@@ -127,10 +127,14 @@ const Workbook = () => {
                     <button value='submit' className={styles.btn}>
                         Submit
                     </button>{' '}
+                    <button
+                        type='button'
+                        className={styles.btn}
+                        onClick={() => newQuestion()}
+                    >
+                        New Question
+                    </button>
                 </form>
-                <button className={styles.btn} onClick={() => newQuestion()}>
-                    New Question
-                </button>
             </div>
         </div>
     );
