@@ -30,6 +30,9 @@
     .navbar__link + .navbar__link {
         margin-left: 1rem;
     }
+    .image {
+        display: none;
+    }
 }
 
 .un {

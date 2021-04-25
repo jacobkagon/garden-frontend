@@ -15,6 +15,7 @@ function Navbar() {
                     <a style={{ display: 'flex', alignItems: 'flex-end' }}>
                         <h2>The Garden</h2>
                         <Image
+                           className={styles.image}
                             width={45}
                             height={60}
                             // responsive={true}
