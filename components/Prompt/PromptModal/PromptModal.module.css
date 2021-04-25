@@ -1,0 +1,29 @@
+.prompt {
+    font-size: 0.7rem;
+    color: var(--gray-600);
+    padding: 0.5rem;
+}
+
+.promptQuestion {
+    color: var(--primary);
+    font-weight: bold;
+}
+/* 
+.promptAnswer {
+} */
+
+.promptFooter {
+    font-size: 0.5rem;
+}
+
+/*modal*/
+
+.btnClose {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+.btnOpenModal {
+    background-color: var(--secondary);
+    color: lightcoral;
+}
