@@ -1,5 +1,6 @@
 .wrapper {
     border-bottom: 3px solid var(--primary);
+    /* box-shadow: 0px 0px 15px var(--primary); */
 }
 
 .navbar {
@@ -31,11 +32,10 @@
     }
 }
 
-
 .un {
-  background-color: white;
-  font-size: 1rem;
-  border: none;
+    background-color: white;
+    font-size: 1rem;
+    border: none;
 }
 
 .un + .un {
@@ -43,23 +43,22 @@
 }
 
 .un:after {
-  content: '';
-  width: 0px;
-  height: 2px;
-  display: block;
-  background: var(--primary);
-  transition: 300ms;
-  
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: var(--primary);
+    transition: 300ms;
 }
 
 .un:hover:after {
-  width: 100%;
+    width: 100%;
 }
 
-.nav_wrap_right{
-    display:flex;
+.nav_wrap_right {
+    display: flex;
     align-items: flex-end;
-    margin-left:.08rem
+    margin-left: 0.08rem;
     /* ;
     float:right; */
 }

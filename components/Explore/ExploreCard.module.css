@@ -11,7 +11,7 @@
     position: relative;
     border-radius: 10%;
     box-shadow: 3px 3px 7px var(--gray-200);
-    opacity:92%
+    opacity: 92%;
 
     /*rounded, shadow*/
 }
@@ -30,8 +30,8 @@
 }
 
 @media (min-width: 900px) {
-    .container{
+    .container {
         width: 300px;
-        margin: 30px;      
+        margin: 30px;
     }
 }
