@@ -80,9 +80,17 @@
 } */
 
 @media (min-width: 900px) {
+    .wrapper {
+        height: 65vh;
+    }
+
     .card {
         width: 90%;
         height: 50vh;
         margin-top: 5rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
     }
 }

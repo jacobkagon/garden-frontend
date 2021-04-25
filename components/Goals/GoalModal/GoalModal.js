@@ -6,6 +6,7 @@ import { Modal, useModal, ModalTransition } from 'react-simple-hook-modal';
 import 'react-simple-hook-modal/dist/styles.css';
 import { GrEdit } from 'react-icons/gr';
 import { BsTrash } from 'react-icons/bs';
+import { ImCross } from 'react-icons/im';
 
 const GoalModal = ({ id, goalTask, fetchData }) => {
     const { isModalOpen, openModal, closeModal } = useModal();
@@ -54,16 +55,30 @@ const GoalModal = ({ id, goalTask, fetchData }) => {
                 isOpen={isModalOpen}
                 transition={ModalTransition.NONE}
             >
-                <form onSubmit={(e) => handleSubmit(e)}>
+                <form
+                    onSubmit={(e) => handleSubmit(e)}
+                    className={styles.wrapper}
+                >
+                    <div style={{ textAlign: 'right', marginBottom: '20px' }}>
+                        <button
+                            onClick={closeModal}
+                            className={styles.btnClose}
+                        >
+                            <ImCross />
+                        </button>
+                    </div>
                     <textarea
                         value={task}
                         className={styles.textArea}
                         placeholder='type your goals here...'
                         onChange={(event) => setTask(event.target.value)}
                     ></textarea>
-                    <button type='submit'>submit</button>
+                    <div style={{ textAlign: 'right', marginTop: '10px' }}>
+                        <button type='submit' className={styles.btnSubmit}>
+                            submit
+                        </button>
+                    </div>
                 </form>
-                <button onClick={closeModal}>close</button>
             </Modal>
         </>
     );
