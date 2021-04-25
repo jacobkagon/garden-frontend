@@ -33,6 +33,7 @@
     color: var(--gray-600);
     padding: 0.5rem;
     border-bottom: 2px solid white;
+    
 }
 
 .taskDone {
@@ -63,6 +64,7 @@
     padding: 0 5px;
     color: white;
     width: 20%;
+    
 }
 
 @media (min-width: 900px) {

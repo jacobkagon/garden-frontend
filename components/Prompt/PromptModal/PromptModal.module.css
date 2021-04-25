@@ -26,4 +26,5 @@
 .btnOpenModal {
     background-color: var(--secondary);
     color: lightcoral;
+    cursor: pointer;
 }
