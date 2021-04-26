@@ -63,8 +63,8 @@
     padding: 0 5px;
     color: white;
     width: 20%;
-    font-size: 0.65em;
-    font-family: 'Roboto', sans-serif;
+    font-size: 0.55em;
+    font-family: 'Roboto Mono';
 }
 
 .btnSubmit:hover {
