@@ -33,7 +33,6 @@
     cursor: pointer;
 }
 
-
 .wrapper {
     margin-top: 1000px;
     display: flex;
@@ -52,7 +51,7 @@
 
 .btnClose {
     background-color: white;
-    color: red;
+    color: lightcoral;
     cursor: pointer;
 }
 
@@ -62,4 +61,9 @@
     font-size: 1rem;
     padding: 3px 7px;
     color: white;
+    cursor: pointer;
+}
+
+.btnSubmit:hover {
+    background-color: #cbdbb5;
 }
