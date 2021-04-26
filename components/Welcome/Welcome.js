@@ -16,7 +16,7 @@ const Welcome = () => {
                 />
 
                 <p className={styles.slogan}>
-                    A place to discover and explore our differences
+                    A place to journal and plant new seeds.
                 </p>
             </div>
         </>
